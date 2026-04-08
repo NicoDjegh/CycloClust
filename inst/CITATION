@@ -1,0 +1,10 @@
+citHeader("To cite CycloClust in publications use:")
+
+bibentry(
+  bibtype = "Manual",
+  title   = "CycloClust: {An} {R} package to ...",
+  author  = c(person("Djeghri Nicolas")),
+  year    = "2026",
+  note    = "R package version 0.0.0.9000",
+  url     = "https://github.com/NicoDjegh/CycloClust"
+)
