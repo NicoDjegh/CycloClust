@@ -1,6 +1,6 @@
 Package: CycloClust
 Type: Package
-Title: The Title of the Project
+Title: CycloClust: Constrained clustering for time-series with cyclical dynamics
 Version: 0.0.0.9000
 Authors@R: c(
     person(given   = "Nicolas",
