@@ -1,7 +1,8 @@
 #' Cyclical time-Constrained Clustering
 #'
-#' Function \code{cycloClust} performs cyclical time-constrained agglomerative clustering from a multivariate dissimilarity matrix.
-#' The function piggy-backs largely on function \code{\link{constr.hclust}} by P. Lagendre and G. Guénard, from package \code{\link{adespatial}}, the user is strongly advised to check the corresponding documentation.
+#' Function \code{cycloClust} performs cyclical-time-constrained agglomerative clustering from a multivariate dissimilarity matrix.
+#' The function piggy-backs largely on function \code{\link{constr.hclust}} by P. Legendre and G. Guénard, from package \code{\link{adespatial}},
+#' the user is strongly advised to check the corresponding documentation as well as documentation from \code{\link{hclust}}, the more general R function for hierarchical clustering.
 #'
 #' @details
 #'
@@ -12,7 +13,7 @@
 #' @references
 #'
 #' @encoding UTF-8
-#' @name trajectoryCyclical
+#' @name cycloClust
 #'
 #' @seealso \code{\link{constr.hclust}},\code{\link{hclust}}
 #'
@@ -37,18 +38,15 @@ cycloClust <- function(d,
   if(length(cycle.duration)>1) stop("'cycle.duration' should be a single number")
   if(cyclic.link.tolerance>cycle.duration) stop("'cyclic.link.tolerance' should be smaller than 'cycle.duration'")
 
-  #reordering:
   reord <- order(time)
   time <- time[reord]
   d <- as.matrix(d)
   d <- d[reord,reord]
   d <- as.dist(d)
 
-  #build the 'link' parameter for constr.hclust
-  #1) linear time
   origin <- 1:(length(time)-1)
   target <- 2:length(time)
-  #2) cyclic time
+
   cyclic.time <- time%%cycle.duration
   d1 <- as.matrix(dist(cyclic.time))
   d2 <- cycle.duration - d1
@@ -69,9 +67,10 @@ cycloClust <- function(d,
   target <- c(target,as.numeric(truc))
   links <- data.frame(origin,target)
 
-  #Put that in function constr.hclust (it's the one doing the heavy lifting)
   clust <- adespatial::constr.hclust(d,method=method,links=links)
   clust$times <- data.frame(times=time,cycles=time-cyclic.time,cyclic.time=cyclic.time)
+  clust$cycle.duration <- cycle.duration
 
+  class(clust) <- c("cycloClust",class(clust))
   return(clust)
 }

@@ -1,13 +1,39 @@
-# Utility functions for CycloClust performing basic tasks related to cyclical (circular) time.
+#' Utility function for CycloClust
+#'
+#' Function \code{circ.mean} computes circular means while function \code{linearize.circ.ts} "linearizes" a circular time series (see details).
+#' This is particularly useful to test trends along time (see examples).
+#'
+#' @details
+#'
+#' @return
+#'
+#' @author Nicolas Djeghri, UBO
+#'
+#' @references
+#'
+#' @encoding UTF-8
+#' @name UtilitiesCycloClust
+#' @aliases circ.mean linearize.circ.ts
+#'
+#' @seealso \code{\link{cycloClust}},\code{\link{cyclicPosition}}
+#'
+#' @examples
 
-#a function for computing circular means
+
+#' @rdname UtilitiesCycloClust
+#' @param x A vector containing angles (in radians) to be averaged
+#' @param na.rm Boolean. Should the \code{NA} be removed prior to circular mean computation?
+#' @export
 circ.mean <- function(x,na.rm=T){
   truc <- atan2(mean(sin(x),na.rm=na.rm),mean(cos(x),na.rm=na.rm))
   return(truc)
 }
 
-
-#a function to linearize time series define on circular variables (allows trend tests etc...)
+#' @rdname UtilitiesCycloClust
+#' @param ts A circular time series that is to be linearized.
+#' @param cycle.duration The duration of a cycle in ts
+#' @param start.is.0 Boolean. Should the start of the linearized time series be set to 0? Else it is taken as the first value of \code{ts}.
+#' @export
 linearize.circ.ts <- function(ts,cycle.duration,start.is.0=T){
 
   past <- ts[1:(length(ts)-1)]
