@@ -71,6 +71,7 @@ cycloClust <- function(d,
 
   #Put that in function constr.hclust (it's the one doing the heavy lifting)
   clust <- adespatial::constr.hclust(d,method=method,links=links)
+  clust$times <- data.frame(times=time,cycles=time-cyclic.time,cyclic.time=cyclic.time)
 
   return(clust)
 }
