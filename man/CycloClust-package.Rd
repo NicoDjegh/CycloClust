@@ -6,10 +6,19 @@
 \alias{CycloClust}
 \title{CycloClust: Cyclical-time constrained clustering}
 \description{
-Constrained clustering of time series with cyclical dynamics (seasonality, day-night cycles etc.).
+Constrained clustering of time series with cyclical dynamics
+(seasonality, day-night cycles etc.).
+}
+\details{
+The main function of the package is \code{\link{cyclo.hclust}}, derived from
+\code{\link{constr.hclust}}, and allowing to perform cyclical-time
+constrained hierarchical clustering. Once a clustering is obtained,
+\code{CycloClust} provides functions to follow changes in cluster position
+within cycles (see \code{\link{cluster.cyclo.pos}}, \code{\link{lin.cyclo.ts}})
+and to visualize clusters (A RAJOUTER!!!).
 }
 \seealso{
-\link{\code{adespatial}}
+\code{\link{adespatial}}
 }
 \author{
 Nicolas Djeghri

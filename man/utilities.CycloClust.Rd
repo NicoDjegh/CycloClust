@@ -3,13 +3,13 @@
 \encoding{UTF-8}
 \name{utilities.CycloClust}
 \alias{utilities.CycloClust}
-\alias{circ.mean}
-\alias{linearize.circ.ts}
+\alias{cyclo.mean}
+\alias{lin.cyclo.ts}
 \title{Utility functions for CycloClust}
 \usage{
-circ.mean(x, na.rm = T)
+cyclo.mean(x, na.rm = T)
 
-linearize.circ.ts(ts, cycle.duration, start.is.0 = T)
+lin.cyclo.ts(ts, cycle.duration, start.is.0 = T)
 }
 \arguments{
 \item{x}{A vector containing angles (in radians) to be averaged}
@@ -23,13 +23,27 @@ linearize.circ.ts(ts, cycle.duration, start.is.0 = T)
 \item{start.is.0}{Boolean. Should the start of the linearized time series be set to 0? Else it is taken as the first value of \code{ts}.}
 }
 \description{
-Function \code{circ.mean} computes circular means while function \code{linearize.circ.ts} "linearizes" a circular time series (see details).
-This is particularly useful to test trends along time (see examples).
+Function \code{cyclo.mean} computes cyclical (i.e. circular) means while
+function \code{lin.cyclo.ts} "linearizes" a cyclical time-series (see details).
+This is particularly useful to test trends along time (OTHER FUNCTION???).
 }
 \details{
-Function \code{circ.mean} computes circular means.
+Function \code{cyclo.mean} computes a cyclical (i.e. circular) mean in radians.
 
-Function \code{linearize.circ.ts} "linearizes" cyclical time series (i.e. time series of dates along cycles).
+Function \code{lin.cyclo.ts} returns a "linearized" version of a cyclical
+time-series (mostly used for time-series of dates along cycles). The function
+works by computing distances along the cycles between all consecutive points.
+Note that there is two ways to compute the distance between two point from a
+cyclical variable: clockwise or counter-clockwise. \code{lin.cyclo.ts} always
+takes the shortest path (most conservative option). The function then assigns
+a sign to this distance as a function of its rotational direction (positive
+when going in the direction of time, negative when going opposite). The
+"linearized" time series is obtained with the cumulative sum of those
+distances.
+}
+\examples{
+#WRITE SOME R CODE HERE!!!
+
 }
 \references{
 NONE for now!

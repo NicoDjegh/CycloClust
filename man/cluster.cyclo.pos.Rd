@@ -12,8 +12,30 @@ cluster.cyclo.pos(x, k)
 
 \item{k}{an integer scalar with the desired number of clusters (as in \code{\link{cutree}}).}
 }
+\value{
+An object of class \code{\link{list}}, containing:
+\itemize{
+\item{\code{means}: A table containing the mean position of each cluster in each cycle.}
+\item{\code{starts}: A table containing the starting position of each cluster along each cycle.}
+\item{\code{ends}: A table containing the ending position of each cluster along each cycle.}
+\item{\code{ranges}: A table containing the ranges covered by each cluster within each cycle.}
+}
+}
 \description{
-Function \code{cluster.cyclo.pos} computes the start, end, mean and range of cyclical-time-constrained clusters along the time series cycles.
+Function \code{cluster.cyclo.pos} computes indices of cluster position
+(start, end, mean and range) of cyclical-time-constrained clusters along
+in different cycles.
+}
+\details{
+A valuable aspect of a cyclical-time constrained clustering is the ability to
+compare clusters' position in several cycles. Displacement of clusters can be
+interpreted as advancing or delaying of a particular state along the cycles.
+The function \code{cluster.cyclo.pos} compute four indices allowing related to
+cluster position within cycles (see Value).
+}
+\examples{
+#WRITE SOME R CODE IN THERE!!!
+
 }
 \seealso{
 \code{\link{cyclo.hclust}}
