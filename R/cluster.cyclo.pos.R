@@ -2,7 +2,7 @@
 #'
 #' Function \code{cluster.cyclo.pos} computes indices of cluster position
 #' (start, end, mean and range) of cyclical-time-constrained clusters along
-#' in different cycles.
+#' different cycles.
 #'
 #' @details
 #' A valuable aspect of a cyclical-time constrained clustering is the ability to
