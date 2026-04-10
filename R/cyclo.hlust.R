@@ -1,23 +1,30 @@
 #' Cyclical time-Constrained Clustering
 #'
-#' Function \code{cycloClust} performs cyclical-time-constrained agglomerative clustering from a multivariate dissimilarity matrix.
+#' Function \code{cyclo.hclust} performs cyclical-time-constrained agglomerative clustering from a multivariate dissimilarity matrix.
 #' The function piggy-backs largely on function \code{\link{constr.hclust}} by P. Legendre and G. Guénard, from package \code{\link{adespatial}},
 #' the user is strongly advised to check the corresponding documentation as well as documentation from \code{\link{hclust}}, the more general R function for hierarchical clustering.
 #'
 #' @details
+#' Function \code{cyclo.hclust} uses the parameters \code{time}, \code{cycle.duration}, and \code{cyclic.link.tolerance}
+#' to compute a list of edges connecting observation along linear time AND cyclical time (for instance with a multiannual time series, connecting January of year 1 to January of year 2 etc.).
+#' This list of edges in the transferred to function \code{\link{constr.hclust}} as its \code{link} parameter.
+#' All the clustering is carried by \code{\link{constr.hclust}} and users are strongly advised to check the associated documentation for clustering methods.
 #'
 #' @return
+#' \code{cyclo.hclust} returns an output slightly modified from the one provided by \code{\link{constr.hclust}} containing additional innformation used in the other functions of package \code{CycloClust}.
 #'
 #' @author Nicolas Djeghri, UBO
 #'
 #' @references
+#' Guénard, G. and P. Legendre. 2022. Hierarchical clustering with contiguity constraint in R. Journal of Statistical Software 103(7): 1-26 (https://doi.org/10.18637/jss.v103.i07)
 #'
 #' @encoding UTF-8
-#' @name cycloClust
+#' @name cyclo.hclust
 #'
-#' @seealso \code{\link{constr.hclust}},\code{\link{hclust}}
+#' @seealso \code{\link{constr.hclust}}, \code{\link{hclust}}
 #'
 #' @examples
+#' #I have to put some R code in there!!!
 #'
 #' @param d A class \code{\link{dist}} dissimilarity matrix.
 #' @param method The agglomeration method to be used (parsed to \code{\link{constr.hclust}}).
@@ -27,11 +34,11 @@
 #' @export
 
 
-cycloClust <- function(d,
-                       method = "ward.D2",
-                       time,
-                       cycle.duration,
-                       cyclic.link.tolerance = cycle.duration/10)
+cyclo.hclust <- function(d,
+                         method = "ward.D2",
+                         time,
+                         cycle.duration,
+                         cyclic.link.tolerance = cycle.duration/10)
 {
   if(!inherits(d, "dist")) stop("'d' should be of class `dist`")
   if(any(table(time)>1)) stop("Duplicate times are not supported (only one time-series treated)")
@@ -71,6 +78,6 @@ cycloClust <- function(d,
   clust$times <- data.frame(times=time,cycles=time-cyclic.time,cyclic.time=cyclic.time)
   clust$cycle.duration <- cycle.duration
 
-  class(clust) <- c("cycloClust",class(clust))
+  class(clust) <- c("cyclo.hclust",class(clust))
   return(clust)
 }

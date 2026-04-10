@@ -1,6 +1,6 @@
 #' Clusters' cyclical start, end, mean and range
 #'
-#' Function \code{cyclicPosition} computes the start, end, mean and range of cyclical-time-constrained clusters along the time series cycles.
+#' Function \code{cluster.cyclo.pos} computes the start, end, mean and range of cyclical-time-constrained clusters along the time series cycles.
 #'
 #' @details
 #'
@@ -11,18 +11,18 @@
 #' @references
 #'
 #' @encoding UTF-8
-#' @name cyclicPosition
+#' @name cluster.cyclo.pos
 #'
-#' @seealso \code{\link{cycloClust}},
+#' @seealso \code{\link{cyclo.hclust}}
 #'
 #' @examples
 #'
-#' @param x A cyclical-time-constrained clustering object, as provided by function \code{\link{cycloClust}}.
+#' @param x A cyclical-time-constrained clustering object, as provided by function \code{\link{cyclo.hclust}}.
 #' @param k an integer scalar with the desired number of clusters (as in \code{\link{cutree}}).
 #' @export
 
-cyclicPosition <- function(x,
-                          k)
+cluster.cyclo.pos <- function(x,
+                              k)
 {
   if(!inherits(x, "cycloClust")) stop("'x' should be of class `cycloClust`")
 

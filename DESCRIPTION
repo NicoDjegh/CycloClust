@@ -1,6 +1,6 @@
 Package: CycloClust
 Type: Package
-Title: CycloClust: Constrained clustering for time-series with cyclical dynamics
+Title: Constrained clustering for time-series with cyclical dynamics
 Version: 0.0.0.9000
 Authors@R: c(
     person(given   = "Nicolas",
@@ -8,8 +8,7 @@ Authors@R: c(
            role    = c("aut", "cre", "cph"),
            email   = "nicolas.djeghri@gmail.com",
            comment = c(ORCID = "0000-0001-5740-3386")))
-Description: A paragraph providing a full description of the project (on 
-    several lines...)
+Description: ClycloClust allows ecologist to performed cyclical-time constrained hierarchical clustering for time series with cyclical dynamics (seasons, day-night cycles). Once clusters are obtained, the package provides functions to visualize and follow their dynamics over several cycles.
 URL: https://github.com/NicoDjegh/CycloClust
 BugReports: https://github.com/NicoDjegh/CycloClust/issues
 License: GPL (>= 2)

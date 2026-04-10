@@ -2,22 +2,18 @@
 % Please edit documentation in R/CycloClust-package.R
 \docType{package}
 \name{CycloClust-package}
-\alias{CycloClust}
 \alias{CycloClust-package}
-\title{CycloClust: The Title of the Project}
+\alias{CycloClust}
+\title{CycloClust: Cyclical-time constrained clustering}
 \description{
-A paragraph providing a full description of the project (on several lines...)
+Constrained clustering of time series with cyclical dynamics (seasonality, day-night cycles etc.).
 }
 \seealso{
-Useful links:
-\itemize{
-  \item \url{https://github.com/NicoDjegh/CycloClust}
-  \item Report bugs at \url{https://github.com/NicoDjegh/CycloClust/issues}
-}
-
+\link{\code{adespatial}}
 }
 \author{
-\strong{Maintainer}: Nicolas Djeghri \email{nicolas.djeghri@gmail.com} (\href{https://orcid.org/0000-0001-5740-3386}{ORCID}) [copyright holder]
-
+Nicolas Djeghri
+\email{nicolas.djeghri@gmail.com}
+\href{https://orcid.org/0000-0001-5740-3386}{ORCID}
 }
 \keyword{internal}
