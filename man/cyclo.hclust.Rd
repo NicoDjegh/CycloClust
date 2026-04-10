@@ -25,25 +25,37 @@ cyclo.hclust(
 \item{cyclic.link.tolerance}{a number indicating how far in cyclic time a link can reach (see details). Defaults to \code{cycle.duration/10}.}
 }
 \value{
-\code{cyclo.hclust} returns an output slightly modified from the one provided by \code{\link{constr.hclust}} containing additional information used in the other functions of package \code{CycloClust}.
+\code{cyclo.hclust} returns an output slightly modified from the one provided
+by \code{\link[adespatial]{constr.hclust}} containing additional information used in the
+other functions of package \code{CycloClust}.
 }
 \description{
-Function \code{cyclo.hclust} performs cyclical-time-constrained agglomerative clustering from a multivariate dissimilarity matrix.
-The function piggy-backs largely on function \code{\link[adespatial]{constr.hclust}} by P. Legendre and G. Guénard, from package \code{\link[adespatial]{adespatial}},
-the user is strongly advised to check the corresponding documentation as well as documentation from \code{\link{hclust}}, the more general R function for hierarchical clustering.
+Function \code{cyclo.hclust} performs cyclical-time-constrained agglomerative
+clustering from a multivariate dissimilarity matrix. The function piggy-backs
+largely on function \code{\link[adespatial]{constr.hclust}} by P. Legendre
+and G. Guénard, from package \code{\link[adespatial]{adespatial}}, the user
+is strongly advised to check the corresponding documentation as well as
+documentation from \code{\link{hclust}}, the more general R function for
+hierarchical clustering.
 }
 \details{
-Function \code{cyclo.hclust} uses the parameters \code{time}, \code{cycle.duration}, and \code{cyclic.link.tolerance}
-to compute a list of edges connecting observation along linear time AND cyclical time (for instance with a multi-annual time-series, connecting January of year 1 to January of year 2 etc.).
-This list of edges in the transferred to function \code{\link[adespatial]{constr.hclust}} as its \code{link} parameter.
-All the clustering is carried by \code{\link[adespatial]{constr.hclust}} and users are strongly advised to check the associated documentation for clustering methods.
+Function \code{cyclo.hclust} uses the parameters \code{time},
+\code{cycle.duration}, and \code{cyclic.link.tolerance} to compute a list of
+edges connecting observation along linear time AND cyclical time (for
+instance with a multi-annual time-series, connecting January of year 1 to
+January of year 2 etc.). This list of edges in the transferred to function
+\code{\link[adespatial]{constr.hclust}} as its \code{link} parameter. All the
+clustering is carried by \code{\link[adespatial]{constr.hclust}} and users
+are strongly advised to check the associated documentation for clustering methods.
 }
 \examples{
 #I have to put some R code in there!!!
 
 }
 \references{
-Guénard, G. and P. Legendre. 2022. Hierarchical clustering with contiguity constraint in R. Journal of Statistical Software 103(7): 1-26 (https://doi.org/10.18637/jss.v103.i07)
+Guénard, G. and P. Legendre. 2022. Hierarchical clustering with contiguity
+constraint in R. Journal of Statistical Software 103(7): 1-26
+(https://doi.org/10.18637/jss.v103.i07)
 }
 \seealso{
 \code{\link[adespatial]{constr.hclust}}, \code{\link{hclust}}
