@@ -26,18 +26,23 @@ CycloClust: cyclical-time-constrained clustering <img src="man/figures/package-s
 
 
 
-## Overview
+## Introduction
+
+WORK IN PROGRESS!
+`CycloClust` provides ecologists with ways to perform hierarchical cyclical-time-constrained clustering on multidimensional data for the study of regular ecological rhythms such as seasons, days, or tides.
+The package largely piggy-backs on function `constr.hculst` by P. Legendre and G. Guénard implemented in package [`adespatial`](https://cran.r-project.org/web/packages/adespatial/index.html).
 
 
-The R package `CycloClust`... **{{ DESCRIBE YOUR PACKAGE }}**
 
+## Functions
 
+`CycloClust` provides functions to obtain, describe and visualize clusters constrained in cyclical time with the following set of  functions:
+|`cycloClust()`| Performs the clustering by calling `constr.hclust` and applying a cyclical time constraint|
+|`cyclicPosition()`| Computes the position of clusters in cyclical time (start, end, mean, and range of each cluster for each cycle)|
 
-## Features
-
-The main purpose of `CycloClust` is to... **{{ DESCRIBE THE MAIN FEATURES }}**
-
-
+Some additional functions are called within the package but may be valuable to users:
+|`circ.mean()`| Computes circular (i.e. cyclical) means|
+|`linearize.circ.ts`| Linearizes a circular time series|
 
 ## Installation
 
@@ -60,13 +65,17 @@ For an overview of the main features of `CycloClust`, please read the
 [Get started](https://NicoDjegh.github.io/CycloClust/articles/CycloClust.html)
 vignette.
 
-
 ## Citation
 
 Please cite `CycloClust` as: 
 
-> Djeghri Nicolas (`r format(Sys.Date(), "%Y")`) CycloClust: An R 
-package to **{{ TITLE }}**. R package version 0.0.0.9000. 
+> Djeghri Nicolas (`r format(Sys.Date(), "%Y")`) CycloClust: cyclical-time-constrained clustering. R package version 0.0.0.9000. 
 <https://github.com/NicoDjegh/CycloClust/>
+
+
+## References
+
++ Guénard, G. and P. Legendre. 2022. Hierarchical clustering with contiguity constraint in R. Journal of Statistical Software 103(7): 1-26 (https://doi.org/10.18637/jss.v103.i07)
+
 
 
