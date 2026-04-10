@@ -15,7 +15,7 @@
 #' takes the shortest path (most conservative option). The function then assigns
 #' a sign to this distance as a function of its rotational direction (positive
 #' when going in the direction of time, negative when going opposite). The
-#' "linearized" time series is obtained with the cumulative sum of those
+#' "linearized" time-series is obtained with the cumulative sum of those
 #' distances.
 #'
 #'
