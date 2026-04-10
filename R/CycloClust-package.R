@@ -12,14 +12,14 @@
 #'
 #' @details
 #' The main function of the package is \code{\link{cyclo.hclust}}, derived from
-#' \code{\link{constr.hclust}}, and allowing to perform cyclical-time
+#' \code{\link[adespatial]{constr.hclust}}, and allowing to perform cyclical-time
 #' constrained hierarchical clustering. Once a clustering is obtained,
 #' \code{CycloClust} provides functions to follow changes in cluster position
 #' within cycles (see \code{\link{cluster.cyclo.pos}}, \code{\link{lin.cyclo.ts}})
 #' and to visualize clusters (A RAJOUTER!!!).
 #'
 #'
-#' @seealso \code{\link{adespatial}}
+#' @seealso \code{\link[adespatial]{adespatial}}
 #'
 #' @keywords internal
 "_PACKAGE"

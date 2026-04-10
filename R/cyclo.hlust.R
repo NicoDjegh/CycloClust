@@ -1,17 +1,17 @@
 #' Cyclical time-Constrained Clustering
 #'
 #' Function \code{cyclo.hclust} performs cyclical-time-constrained agglomerative clustering from a multivariate dissimilarity matrix.
-#' The function piggy-backs largely on function \code{\link{constr.hclust}} by P. Legendre and G. Guénard, from package \code{\link{adespatial}},
+#' The function piggy-backs largely on function \code{\link[adespatial]{constr.hclust}} by P. Legendre and G. Guénard, from package \code{\link[adespatial]{adespatial}},
 #' the user is strongly advised to check the corresponding documentation as well as documentation from \code{\link{hclust}}, the more general R function for hierarchical clustering.
 #'
 #' @details
 #' Function \code{cyclo.hclust} uses the parameters \code{time}, \code{cycle.duration}, and \code{cyclic.link.tolerance}
-#' to compute a list of edges connecting observation along linear time AND cyclical time (for instance with a multiannual time series, connecting January of year 1 to January of year 2 etc.).
-#' This list of edges in the transferred to function \code{\link{constr.hclust}} as its \code{link} parameter.
-#' All the clustering is carried by \code{\link{constr.hclust}} and users are strongly advised to check the associated documentation for clustering methods.
+#' to compute a list of edges connecting observation along linear time AND cyclical time (for instance with a multi-annual time-series, connecting January of year 1 to January of year 2 etc.).
+#' This list of edges in the transferred to function \code{\link[adespatial]{constr.hclust}} as its \code{link} parameter.
+#' All the clustering is carried by \code{\link[adespatial]{constr.hclust}} and users are strongly advised to check the associated documentation for clustering methods.
 #'
 #' @return
-#' \code{cyclo.hclust} returns an output slightly modified from the one provided by \code{\link{constr.hclust}} containing additional innformation used in the other functions of package \code{CycloClust}.
+#' \code{cyclo.hclust} returns an output slightly modified from the one provided by \code{\link{constr.hclust}} containing additional information used in the other functions of package \code{CycloClust}.
 #'
 #' @author Nicolas Djeghri, UBO
 #'
@@ -21,13 +21,13 @@
 #' @encoding UTF-8
 #' @name cyclo.hclust
 #'
-#' @seealso \code{\link{constr.hclust}}, \code{\link{hclust}}
+#' @seealso \code{\link[adespatial]{constr.hclust}}, \code{\link{hclust}}
 #'
 #' @examples
 #' #I have to put some R code in there!!!
 #'
 #' @param d A class \code{\link{dist}} dissimilarity matrix.
-#' @param method The agglomeration method to be used (parsed to \code{\link{constr.hclust}}).
+#' @param method The agglomeration method to be used (parsed to \code{\link[adespatial]{constr.hclust}}).
 #' @param time A vector indicating the linear time corresponding to objects in \code{d}.
 #' @param cycle.duration A number indicating the duration of one cycle. Must be in the same units as \code{time}.
 #' @param cyclic.link.tolerance a number indicating how far in cyclic time a link can reach (see details). Defaults to \code{cycle.duration/10}.
