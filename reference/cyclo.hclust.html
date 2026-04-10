@@ -52,7 +52,7 @@ the user is strongly advised to check the corresponding documentation as well as
 
     <div class="ref-description">
     <p>Function <code>cyclo.hclust</code> performs cyclical-time-constrained agglomerative clustering from a multivariate dissimilarity matrix.
-The function piggy-backs largely on function <code>constr.hclust</code> by P. Legendre and G. Guénard, from package <code>adespatial</code>,
+The function piggy-backs largely on function <code><a href="http://adeverse.github.io/adespatial/reference/constr.hclust.html" class="external-link">constr.hclust</a></code> by P. Legendre and G. Guénard, from package <code>adespatial</code>,
 the user is strongly advised to check the corresponding documentation as well as documentation from <code><a href="https://rdrr.io/r/stats/hclust.html" class="external-link">hclust</a></code>, the more general R function for hierarchical clustering.</p>
     </div>
 
@@ -75,7 +75,7 @@ the user is strongly advised to check the corresponding documentation as well as
 
 
 <dt id="arg-method">method<a class="anchor" aria-label="anchor" href="#arg-method"></a></dt>
-<dd><p>The agglomeration method to be used (parsed to <code>constr.hclust</code>).</p></dd>
+<dd><p>The agglomeration method to be used (parsed to <code><a href="http://adeverse.github.io/adespatial/reference/constr.hclust.html" class="external-link">constr.hclust</a></code>).</p></dd>
 
 
 <dt id="arg-time">time<a class="anchor" aria-label="anchor" href="#arg-time"></a></dt>
@@ -92,14 +92,14 @@ the user is strongly advised to check the corresponding documentation as well as
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p><code>cyclo.hclust</code> returns an output slightly modified from the one provided by <code>constr.hclust</code> containing additional innformation used in the other functions of package <code>CycloClust</code>.</p>
+    <p><code>cyclo.hclust</code> returns an output slightly modified from the one provided by <code>constr.hclust</code> containing additional information used in the other functions of package <code>CycloClust</code>.</p>
     </div>
     <div id="details">
     <h2>Details</h2>
     <p>Function <code>cyclo.hclust</code> uses the parameters <code>time</code>, <code>cycle.duration</code>, and <code>cyclic.link.tolerance</code>
-to compute a list of edges connecting observation along linear time AND cyclical time (for instance with a multiannual time series, connecting January of year 1 to January of year 2 etc.).
-This list of edges in the transferred to function <code>constr.hclust</code> as its <code>link</code> parameter.
-All the clustering is carried by <code>constr.hclust</code> and users are strongly advised to check the associated documentation for clustering methods.</p>
+to compute a list of edges connecting observation along linear time AND cyclical time (for instance with a multi-annual time-series, connecting January of year 1 to January of year 2 etc.).
+This list of edges in the transferred to function <code><a href="http://adeverse.github.io/adespatial/reference/constr.hclust.html" class="external-link">constr.hclust</a></code> as its <code>link</code> parameter.
+All the clustering is carried by <code><a href="http://adeverse.github.io/adespatial/reference/constr.hclust.html" class="external-link">constr.hclust</a></code> and users are strongly advised to check the associated documentation for clustering methods.</p>
     </div>
     <div id="references">
     <h2>References</h2>
@@ -107,7 +107,7 @@ All the clustering is carried by <code>constr.hclust</code> and users are strong
     </div>
     <div id="see-also">
     <h2>See also</h2>
-    <div class="dont-index"><p><code>constr.hclust</code>, <code><a href="https://rdrr.io/r/stats/hclust.html" class="external-link">hclust</a></code></p></div>
+    <div class="dont-index"><p><code><a href="http://adeverse.github.io/adespatial/reference/constr.hclust.html" class="external-link">constr.hclust</a></code>, <code><a href="https://rdrr.io/r/stats/hclust.html" class="external-link">hclust</a></code></p></div>
     </div>
     <div id="author">
     <h2>Author</h2>
