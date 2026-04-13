@@ -72,7 +72,7 @@ lin.cyclo.ts <- function(ts,cycle.duration,start.is.0=T){
   if (start.is.0==F){
     changes <- changes + ts[is.na(ts)==F][1]
   }
-  names(changes) <- names(which(is.na(ts))==FALSE)
+  names(changes) <- names(which(is.na(ts)==FALSE))
 
   return(changes)
 }

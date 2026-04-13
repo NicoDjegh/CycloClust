@@ -19,6 +19,7 @@ An object of class \code{\link{list}}, containing:
 \item{\code{starts}: A table containing the starting position of each cluster along each cycle.}
 \item{\code{ends}: A table containing the ending position of each cluster along each cycle.}
 \item{\code{ranges}: A table containing the ranges covered by each cluster within each cycle.}
+\item{\code{cycle.duration}: The duration of a cycle.}
 }
 }
 \description{

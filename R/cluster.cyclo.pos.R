@@ -18,6 +18,7 @@
 #'  \item{\code{starts}: A table containing the starting position of each cluster along each cycle.}
 #'  \item{\code{ends}: A table containing the ending position of each cluster along each cycle.}
 #'  \item{\code{ranges}: A table containing the ranges covered by each cluster within each cycle.}
+#'  \item{\code{cycle.duration}: The duration of a cycle.}
 #' }
 #'
 #' @author Nicolas Djeghri, UBO
@@ -38,7 +39,7 @@
 cluster.cyclo.pos <- function(x,
                               k)
 {
-  if(!inherits(x, "cycloClust")) stop("'x' should be of class `cycloClust`")
+  if(!inherits(x, "cyclo.hclust")) stop("'x' should be of class `cyclo.hclust`")
 
   groups <- cutree (x,k)
 
@@ -102,7 +103,9 @@ cluster.cyclo.pos <- function(x,
   output$ends <- cycleEnds
   output$ranges <- cycleRanges
 
-  class(output) <- c("list")
+  output$cycle.duration <- x$cycle.duration
+
+  class(output) <- c("list","cluster.cyclo.pos")
   return(output)
 }
 
