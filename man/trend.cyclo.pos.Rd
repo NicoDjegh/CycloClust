@@ -6,6 +6,9 @@
 \usage{
 trend.cyclo.pos(x)
 }
+\arguments{
+\item{x}{The output of function \code{\link{cluster.cyclo.pos}}.}
+}
 \value{
 An object of class \code{\link{list}}, with four tables giving the results of
 the Mann-Kendall tests (tau statistic and p.value) for the different cyclical

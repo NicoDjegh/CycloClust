@@ -21,7 +21,9 @@
 #' @seealso \code{\link{cluster.cyclo.pos}}, \code{\link{cor.test}}
 #'
 #' @author Nicolas Djeghri, UBO
-
+#'
+#' @param x The output of function \code{\link{cluster.cyclo.pos}}.
+#' @export
 trend.cyclo.pos <- function(x)
 {
   if(!inherits(x, "cluster.cyclo.pos")) stop("'x' should be an output of function cluster.cyclo.pos()")
