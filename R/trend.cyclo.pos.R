@@ -18,11 +18,15 @@
 #'  \item{\code{ends}}
 #'  \item{\code{ranges}}
 #' }
+#'
+#' @encoding UTF-8
+#' @name trend.cyclo.pos
+#'
 #' @seealso \code{\link{cluster.cyclo.pos}}, \code{\link{cor.test}}
 #'
 #' @author Nicolas Djeghri, UBO
 #'
-#' @param x The output of function \code{\link{cluster.cyclo.pos}}.
+#' @param x the output of function \code{\link{cluster.cyclo.pos}}.
 #' @export
 trend.cyclo.pos <- function(x)
 {

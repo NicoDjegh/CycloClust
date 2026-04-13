@@ -8,7 +8,7 @@
 cluster.cyclo.pos(x, k)
 }
 \arguments{
-\item{x}{A cyclical-time-constrained clustering object, as provided by function \code{\link{cyclo.hclust}}.}
+\item{x}{a cyclical-time-constrained clustering object, as provided by function \code{\link{cyclo.hclust}}.}
 
 \item{k}{an integer scalar with the desired number of clusters (as in \code{\link{cutree}}).}
 }

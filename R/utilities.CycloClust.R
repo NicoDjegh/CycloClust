@@ -34,8 +34,8 @@
 #' #WRITE SOME R CODE HERE!!!
 #'
 #' @rdname utilities.CycloClust
-#' @param x A vector containing angles (in radians) to be averaged
-#' @param na.rm Boolean. Should the \code{NA} be removed prior to circular mean computation?
+#' @param x a vector containing angles (in radians) to be averaged
+#' @param na.rm boolean. Should \code{NA} be removed prior to circular mean computation?
 #' @export
 cyclo.mean <- function(x,na.rm=T){
   truc <- atan2(mean(sin(x),na.rm=na.rm),mean(cos(x),na.rm=na.rm))
@@ -43,9 +43,9 @@ cyclo.mean <- function(x,na.rm=T){
 }
 
 #' @rdname utilities.CycloClust
-#' @param ts A circular time series that is to be linearized.
-#' @param cycle.duration The duration of a cycle in ts
-#' @param start.is.0 Boolean. Should the start of the linearized time series be set to 0? Else it is taken as the first value of \code{ts}.
+#' @param ts a circular time series that is to be linearized.
+#' @param cycle.duration the duration of a cycle in ts
+#' @param start.is.0 boolean. Should the start of the linearized time series be set to 0? Else it is taken as the first value of \code{ts}.
 #' @export
 lin.cyclo.ts <- function(ts,cycle.duration,start.is.0=T){
 

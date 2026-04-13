@@ -32,7 +32,7 @@
 #' @examples
 #' #WRITE SOME R CODE IN THERE!!!
 #'
-#' @param x A cyclical-time-constrained clustering object, as provided by function \code{\link{cyclo.hclust}}.
+#' @param x a cyclical-time-constrained clustering object, as provided by function \code{\link{cyclo.hclust}}.
 #' @param k an integer scalar with the desired number of clusters (as in \code{\link{cutree}}).
 #' @export
 

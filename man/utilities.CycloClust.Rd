@@ -12,15 +12,15 @@ cyclo.mean(x, na.rm = T)
 lin.cyclo.ts(ts, cycle.duration, start.is.0 = T)
 }
 \arguments{
-\item{x}{A vector containing angles (in radians) to be averaged}
+\item{x}{a vector containing angles (in radians) to be averaged}
 
-\item{na.rm}{Boolean. Should the \code{NA} be removed prior to circular mean computation?}
+\item{na.rm}{boolean. Should \code{NA} be removed prior to circular mean computation?}
 
-\item{ts}{A circular time series that is to be linearized.}
+\item{ts}{a circular time series that is to be linearized.}
 
-\item{cycle.duration}{The duration of a cycle in ts}
+\item{cycle.duration}{the duration of a cycle in ts}
 
-\item{start.is.0}{Boolean. Should the start of the linearized time series be set to 0? Else it is taken as the first value of \code{ts}.}
+\item{start.is.0}{boolean. Should the start of the linearized time series be set to 0? Else it is taken as the first value of \code{ts}.}
 }
 \description{
 Function \code{cyclo.mean} computes cyclical (i.e. circular) means while
