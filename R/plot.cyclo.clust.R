@@ -1,4 +1,4 @@
-#' Clusters' cyclical start, end, mean and range
+#' Plotting cyclical clusters
 #'
 #' Function \code{plot.cyclo.clust} provides options to visualize the cyclical-
 #' time constrained clusters produced by \code{\link{cyclo.hclust}}.

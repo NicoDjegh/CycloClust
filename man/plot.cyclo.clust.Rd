@@ -3,7 +3,7 @@
 \encoding{UTF-8}
 \name{plot.cyclo.clust}
 \alias{plot.cyclo.clust}
-\title{Clusters' cyclical start, end, mean and range}
+\title{Plotting cyclical clusters}
 \usage{
 \method{plot}{cyclo.clust}(
   x,
