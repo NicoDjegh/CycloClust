@@ -14,8 +14,8 @@ The main function of the package is \code{\link{cyclo.hclust}}, derived from
 \code{\link[adespatial]{constr.hclust}}, and allowing to perform cyclical-time
 constrained hierarchical clustering. Once a clustering is obtained,
 \code{CycloClust} provides functions to follow changes in cluster position
-within cycles (see \code{\link{cluster.cyclo.pos}}, \code{\link{lin.cyclo.ts}})
-and to visualize clusters (A RAJOUTER!!!).
+within cycles (see \code{\link{cluster.cyclo.pos}}, \code{\link{lin.cyclo.ts}},
+\code{\link{trend.cyclo.pos}}) and to visualize clusters (A RAJOUTER!!!).
 }
 \seealso{
 \code{\link[adespatial]{constr.hclust}}, \code{\link{hclust}}

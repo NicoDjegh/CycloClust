@@ -25,9 +25,10 @@ cyclo.hclust(
 \item{cyclic.link.tolerance}{a number indicating how far in cyclic time a link can reach (see details). Defaults to \code{cycle.duration/10}.}
 }
 \value{
-\code{cyclo.hclust} returns an output slightly modified from the one provided
-by \code{\link[adespatial]{constr.hclust}} containing additional information used in the
-other functions of package \code{CycloClust}.
+\code{cyclo.hclust} returns an object of class \code{cyclo.hclsut} slightly
+modified from the objects provided by \code{\link[adespatial]{constr.hclust}}
+containing additional information used in the other functions of package
+\code{CycloClust}.
 }
 \description{
 Function \code{cyclo.hclust} performs cyclical-time-constrained agglomerative

@@ -15,8 +15,8 @@
 #' \code{\link[adespatial]{constr.hclust}}, and allowing to perform cyclical-time
 #' constrained hierarchical clustering. Once a clustering is obtained,
 #' \code{CycloClust} provides functions to follow changes in cluster position
-#' within cycles (see \code{\link{cluster.cyclo.pos}}, \code{\link{lin.cyclo.ts}})
-#' and to visualize clusters (A RAJOUTER!!!).
+#' within cycles (see \code{\link{cluster.cyclo.pos}}, \code{\link{lin.cyclo.ts}},
+#' \code{\link{trend.cyclo.pos}}) and to visualize clusters (A RAJOUTER!!!).
 #'
 #'
 #' @seealso \code{\link[adespatial]{constr.hclust}}, \code{\link{hclust}}
@@ -25,7 +25,7 @@
 "_PACKAGE"
 
 ## usethis namespace: start
-#' @importFrom stats dist as.dist cutree
+#' @importFrom stats dist as.dist cutree cor.test
 #' @importFrom adespatial constr.hclust
 ## usethis namespace: end
 NULL
