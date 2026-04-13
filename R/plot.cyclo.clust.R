@@ -19,7 +19,7 @@
 #' @param clust.colors a vector of colors of the same length as \code{k}. Defaults to shades of grey if not provided.
 #' @param cyclical.factor a factor allowing to convert from the unit used in linear time to the unit used in cyclical time used for display.
 #' @param add.means boolean. Should the cluster mean positions be displayed?
-#' @param lines.means boolean. Should the means by joined by lines?
+#' @param lines.means boolean. Should the means be joined by lines?
 #' @param add.points boolean. Should the raw data points be displayed?
 #' @param ... other parameters parsed to function \code{\link{plot}}.
 #' @export

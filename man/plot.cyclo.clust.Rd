@@ -27,7 +27,7 @@
 
 \item{add.means}{boolean. Should the cluster mean positions be displayed?}
 
-\item{lines.means}{boolean. Should the means by joined by lines?}
+\item{lines.means}{boolean. Should the means be joined by lines?}
 
 \item{add.points}{boolean. Should the raw data points be displayed?}
 
