@@ -18,7 +18,7 @@ within cycles (see \code{\link{cluster.cyclo.pos}}, \code{\link{lin.cyclo.ts}})
 and to visualize clusters (A RAJOUTER!!!).
 }
 \seealso{
-\code{\link[adespatial]{adespatial}}
+\code{\link[adespatial]{constr.hclust}}, \code{\link{hclust}}
 }
 \author{
 Nicolas Djeghri

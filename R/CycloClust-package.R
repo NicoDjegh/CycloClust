@@ -19,7 +19,7 @@
 #' and to visualize clusters (A RAJOUTER!!!).
 #'
 #'
-#' @seealso \code{\link[adespatial]{adespatial}}
+#' @seealso \code{\link[adespatial]{constr.hclust}}, \code{\link{hclust}}
 #'
 #' @keywords internal
 "_PACKAGE"

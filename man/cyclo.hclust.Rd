@@ -33,7 +33,7 @@ other functions of package \code{CycloClust}.
 Function \code{cyclo.hclust} performs cyclical-time-constrained agglomerative
 clustering from a multivariate dissimilarity matrix. The function piggy-backs
 largely on function \code{\link[adespatial]{constr.hclust}} by P. Legendre
-and G. Guénard, from package \code{\link[adespatial]{adespatial}}, the user
+and G. Guénard, from package \code{adespatial}, the user
 is strongly advised to check the corresponding documentation as well as
 documentation from \code{\link{hclust}}, the more general R function for
 hierarchical clustering.
